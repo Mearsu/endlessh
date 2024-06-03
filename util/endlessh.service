@@ -8,6 +8,7 @@ Type=simple
 Restart=always
 RestartSec=30sec
 ExecStart=/usr/local/bin/endlessh
+ExecReload=kill -s SIGHUP $MAINPID
 KillSignal=SIGTERM
 
 # Stop trying to restart the service if it restarts too many times in a row
